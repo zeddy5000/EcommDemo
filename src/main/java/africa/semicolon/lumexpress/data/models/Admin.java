@@ -1,9 +1,6 @@
 package africa.semicolon.lumexpress.data.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -13,7 +10,8 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Admin {
+@Builder
+public class Admin extends LumExpressUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
