@@ -18,9 +18,10 @@ public class Product {
     private Long id;
     private String name;
     private String descriptiom;
-    private BigDecimal price;
+    private double price;
     private int quantity;
-    @ElementCollection
+    private int statusCode;
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<Category> categories = new ArrayList<>();
     private String imageUrl;
 }
